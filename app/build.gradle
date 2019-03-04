@@ -6,7 +6,7 @@ apply plugin: 'com.android.library'
 //Step II: Add the below publish details
 publish {
 
-    def groupProjectID = 'com.test.nip'
+    def groupProjectID = 'com.nip.test'
     def artifactProjectID = 'nip-test'
     def publishVersionID = '1.0'
 
