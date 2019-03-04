@@ -2,8 +2,31 @@ apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'com.android.library'
 
 
+ext {
+    bintrayRepo = 'MyTestRepo'
+    bintrayName = 'MyTestRepo'
 
-//Step II: Add the below publish details
+    publishedGroupId = 'com.nip.test'
+    libraryName = 'MyTestRepo'
+    artifact = 'MyTestRepo'
+
+    libraryDescription = 'A library to calculate mathematical operation.'
+
+    siteUrl = 'https://github.com/testing-tech/MyTestRepo'
+    gitUrl = 'https://github.com/testing-tech/MyTestRepo.git'
+
+    libraryVersion = '1.0'
+
+    developerId = 'Testing-007'
+    developerName = 'Testing'
+    developerEmail = 'testing.nip1@email.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ['Apache-2.0']
+}
+
+/*//Step II: Add the below publish details
 publish {
 
     def groupProjectID = 'com.nip.test'
@@ -17,7 +40,7 @@ publish {
     publishVersion = publishVersionID
     desc = 'Android library for displaying data on basic calculation.'
     website = 'https://github.com/testing-tech/MyTestRepo'
-}
+}*/
 
 android {
     compileSdkVersion 28
@@ -43,3 +66,8 @@ dependencies {
 
     implementation "android.arch.work:work-runtime:1.0.0-rc02"
 }
+
+//Add these lines to publish library to bintray
+//Place it at the end of the file
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
