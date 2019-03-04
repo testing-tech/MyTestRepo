@@ -1,8 +1,4 @@
-package com.repo.mylibrary;
-
-/**
- * Created by zealous on 17/01/18.
- */
+package com.nip.test;
 
 public class Calc {
     public int addition(int a, int b) {
