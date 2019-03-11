@@ -2,7 +2,7 @@ apply plugin: 'com.novoda.bintray-release'
 apply plugin: 'com.android.library'
 
 
-ext {
+/*ext {
     bintrayRepo = 'MyTestRepo'
     bintrayName = 'MyTestRepo'
 
@@ -17,30 +17,30 @@ ext {
 
     libraryVersion = '1.0'
 
-    developerId = 'Testing-007'
-    developerName = 'Testing'
+    developerId = 'testing-007'
+    developerName = 'testing'
     developerEmail = 'testing.nip1@email.com'
 
     licenseName = 'The Apache Software License, Version 2.0'
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
     allLicenses = ['Apache-2.0']
-}
+}*/
 
-/*//Step II: Add the below publish details
+//Step II: Add the below publish details
 publish {
 
     def groupProjectID = 'com.nip.test'
     def artifactProjectID = 'nip-test'
     def publishVersionID = '1.0'
 
-    userOrg = 'testing-tech'
+    userOrg = 'testing-007'
     repoName = 'MyTestRepo'
     groupId = groupProjectID
     artifactId = artifactProjectID
     publishVersion = publishVersionID
     desc = 'Android library for displaying data on basic calculation.'
     website = 'https://github.com/testing-tech/MyTestRepo'
-}*/
+}
 
 android {
     compileSdkVersion 28
@@ -50,7 +50,6 @@ android {
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.nip.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -69,5 +68,5 @@ dependencies {
 
 //Add these lines to publish library to bintray
 //Place it at the end of the file
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
